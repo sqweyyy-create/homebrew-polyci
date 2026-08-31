@@ -5,21 +5,21 @@
 class Polyci < Formula
   desc "Run CI/CD pipelines locally in Docker containers, with a debugger, across GitLab CI, CircleCI, and GitHub Actions"
   homepage "https://github.com/sqweyyy-create/PolyCI"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.2.0/polyci_darwin_amd64.tar.gz"
-      sha256 "7e2f614144322803c8cfdda7e44a742cae5d6e02419a798151e5a8212a4fdb1c"
+      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.3.0/polyci_darwin_amd64.tar.gz"
+      sha256 "f4601f19bddc87dc3f86a27511f323d4eac65798aeb6ae64d85cd1a274b10c2e"
 
       define_method(:install) do
         bin.install "polyci"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.2.0/polyci_darwin_arm64.tar.gz"
-      sha256 "8dc5230f4f1360b73dc89d45f74837bc018b907c9ecc6c946143c33fc448c8f3"
+      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.3.0/polyci_darwin_arm64.tar.gz"
+      sha256 "f93db8f3c5c74fcffc6085aa6edc1794cde98420105cb6440139a361388acd33"
 
       define_method(:install) do
         bin.install "polyci"
@@ -29,15 +29,15 @@ class Polyci < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.2.0/polyci_linux_amd64.tar.gz"
-      sha256 "4f0eb38dae388cc75c251ffe1c8bfe856d71252f010659c2a8e6b747ffa0ccf9"
+      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.3.0/polyci_linux_amd64.tar.gz"
+      sha256 "efcff4fd865e517c3e4f946573dbd12826f0e7ac66116fbdb8250a92131e0cad"
       define_method(:install) do
         bin.install "polyci"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.2.0/polyci_linux_arm64.tar.gz"
-      sha256 "bfa8a8fb73e864d6840ae36b0a8b53e8c5ee16600fc31b80b5d34b0248193430"
+      url "https://github.com/sqweyyy-create/PolyCI/releases/download/v0.3.0/polyci_linux_arm64.tar.gz"
+      sha256 "8634e381ac9cf559a1afa85bf98277e901ed02cef512da76112ddd7276d23af5"
       define_method(:install) do
         bin.install "polyci"
       end
